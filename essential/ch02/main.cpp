@@ -57,7 +57,8 @@ const std::vector<int> *fibon_seq(int size) {
 
     if (size <= 0 || size > max_size) {
         std::cerr << "Invalid size " << size << std::endl;
-        return 0;
+//        return 0;
+        return nullptr; // 与上一行相同意思
     }
 
     // 如果size等于或小于elems.size()就不必重新计算了
