@@ -35,6 +35,10 @@ int main() {
     std::vector<int> vec(ia, ia + 8);
     bubble_sort(vec);
     display(vec);
+    std::cout << "=======*v=======" << std::endl;
+
+    const std::vector<int> *v = fibon_seq(12);
+    display(*v);
 
     return 0;
 }
@@ -82,5 +86,15 @@ void bubble_sort(std::vector<int> vec) {
                 swap(vec[i], vec[j]);
             }
         }
+    }
+}
+
+template<typename elemType>
+void display_message(const std::string &msg, const std::vector<elemType> &vec)
+{
+    std::cout << msg;
+    for (int i = 0; i < vec.size(); ++i) {
+        elemType t = vec[i];
+        std::cout << t << ' ';
     }
 }
