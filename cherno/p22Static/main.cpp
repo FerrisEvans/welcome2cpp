@@ -18,6 +18,8 @@ struct StaticEntity {
 
 int StaticEntity::x ,StaticEntity::y;
 
+void Function();
+
 int main() {
 
     Entity e;
@@ -32,5 +34,15 @@ int main() {
     StaticEntity::x = 0;
     StaticEntity::y = -1;
     StaticEntity::print();
+
+    Function();
+    Function();
+    Function();
     return 0;
+}
+
+void Function() {
+    static int i = 0;
+    i++;
+    std::cout << i << std::endl;
 }
