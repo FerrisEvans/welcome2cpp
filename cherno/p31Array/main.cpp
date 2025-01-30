@@ -1,6 +1,7 @@
 #include <iostream>
 
 void string();
+void PrintString(const std::string&);
 
 int main() {
 
@@ -13,6 +14,7 @@ int main() {
     delete[] another;
     std::cout << "Hello, World!" << std::endl;
     string();
+    PrintString("Hello");
     return 0;
 }
 
@@ -21,4 +23,8 @@ void string() {
     std::cout << s << std::endl;
     char c[6] = {'a', 'b', 'c', 'd', 'e', 0};
     std::cout << c << std::endl;
+}
+
+void PrintString(const std::string& s) {
+    std::cout << s << std::endl;
 }
