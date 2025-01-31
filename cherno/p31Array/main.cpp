@@ -2,6 +2,7 @@
 
 void string();
 void PrintString(const std::string&);
+void characters();
 
 int main() {
 
@@ -27,4 +28,11 @@ void string() {
 
 void PrintString(const std::string& s) {
     std::cout << s << std::endl;
+}
+
+void characters() {
+    const char* s = u8"Hello, World!"; // 1 byte
+    const wchar_t* wchar = L"Hello, World!"; // 2 byte(win) / 4 byte(Linux)
+    const char16_t* char16 = u"Hello, World!"; // 2 byte utf16
+    const char32_t* char32 = U"Hello, World!"; // 4 byte utf32
 }
